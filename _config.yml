@@ -1,6 +1,7 @@
 title: 'ProLoop: Progress-Aware Closed-Loop Framework via Structured State Relations for Long-Horizon Robotic Task Planning'
 remote_theme: pages-themes/cayman@v0.2.0
+github:
+  repository_url: https://github.com/proloopplanning/proloopplanning.github.io
 plugins:
   - jekyll-remote-theme
 description: ICRA 2027<br/>Anonymous Author(s)
-show_downloads: false
