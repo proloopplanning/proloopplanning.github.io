@@ -24,6 +24,7 @@ body {
   padding: 4.7rem 1rem 4.2rem;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
 .page-header::after {
@@ -38,9 +39,26 @@ body {
   box-shadow: 0 0 0 2.8rem rgba(223, 244, 237, .08), 0 0 0 5.8rem rgba(223, 244, 237, .05);
 }
 
-.page-header h1 { max-width: 57rem; position: relative; z-index: 1; }
-.page-header .project-name { color: #f4fbf7; }
-.page-header .project-tagline { color: #c5e8de; }
+.page-header h1 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 68rem;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+.page-header .project-name {
+  color: #f4fbf7;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.page-header .project-tagline {
+  color: #c5e8de;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 
 .main-content { max-width: 64rem; padding-top: 3.1rem; }
 .main-content h2 { color: var(--teal-dark); margin-top: 3rem; letter-spacing: -.02em; }
