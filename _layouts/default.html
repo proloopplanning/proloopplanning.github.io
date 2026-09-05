@@ -11,7 +11,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <style>
-      @media screen and (min-width: 64em) {
+      @media screen and (min-width: 64em) and (max-width: 79.99em) {
+        .project-name { font-size: 2.25rem; }
+      }
+      @media screen and (min-width: 80em) {
         .project-name { font-size: 3rem; }
       }
     </style>
