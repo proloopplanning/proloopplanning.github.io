@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#070b14">
+    <meta name="description" content="ProLoop is a progress-aware closed-loop framework for reliable, timely decision-making in long-horizon robotic task planning.">
+    <title>ProLoop: Progress-Aware Closed-Loop Framework via Structured State Relations for Long-Horizon Robotic Task Planning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <div class="shell nav-shell">
+        <a class="brand" href="#top" aria-label="ProLoop home">
+          <span class="brand-mark" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span>Pro<span>Loop</span></span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+          <span class="sr-only">Toggle navigation</span>
+          <span></span><span></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation" data-nav>
+          <a href="#abstract">Abstract</a>
+          <a href="#paper">Paper</a>
+          <a href="#method">Method</a>
+          <a href="#results">Results</a>
+          <a href="#repository">Repository</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero">
+        <div class="hero-aurora hero-aurora--one" aria-hidden="true"></div>
+        <div class="hero-aurora hero-aurora--two" aria-hidden="true"></div>
+        <div class="hero-grid" aria-hidden="true"></div>
+
+        <div class="shell hero-layout">
+          <div class="hero-copy reveal">
+            <div class="venue-badge"><span></span> ICRA 2027 · Anonymous Submission</div>
+            <h1><span>ProLoop:</span> Progress-Aware Closed-Loop Framework</h1>
+            <p class="hero-title-detail">via Structured State Relations for Long-Horizon Robotic Task Planning</p>
+            <p class="hero-lead">A progress-aware closed-loop framework for reliable, timely decision-making in long-horizon robotic task planning.</p>
+
+            <div class="hero-actions">
+              <span class="button button--disabled" aria-disabled="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6zM14 2v6h6M9 13h8M9 17h8"/></svg>
+                Paper · coming soon
+              </span>
+              <a class="button button--ghost" href="https://github.com/proloopplanning/proloopplanning.github.io" target="_blank" rel="noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.46-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.55 9.55 0 0 1 12 6.84a9.5 9.5 0 0 1 2.5.34c1.9-1.29 2.74-1.02 2.74-1.02.56 1.37.21 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+                Repository
+              </a>
+            </div>
+
+            <ul class="topic-list" aria-label="Research topics">
+              <li>Structured state relations</li>
+              <li>Subgoal progress</li>
+              <li>LLM-based planning</li>
+            </ul>
+          </div>
+
+          <div class="loop-visual reveal" aria-label="Conceptual ProLoop closed-loop planning diagram">
+            <div class="visual-topline">
+              <span>PROLOOP / LIVE STATE</span>
+              <span class="system-online"><i></i> Monitoring</span>
+            </div>
+
+            <div class="loop-canvas">
+              <svg class="loop-paths" viewBox="0 0 520 430" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <linearGradient id="path-gradient" x1="0" x2="1">
+                    <stop offset="0" stop-color="#3b82f6"/>
+                    <stop offset="1" stop-color="#22d3ee"/>
+                  </linearGradient>
+                  <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                    <path d="M0,0 L7,3.5 L0,7 Z" fill="#45bff2"/>
+                  </marker>
+                </defs>
+                <path class="path path--flow" d="M112 116 C178 54 344 54 409 116"/>
+                <path class="path path--flow" d="M430 151 C481 204 472 282 415 320"/>
+                <path class="path path--flow" d="M376 351 C302 404 184 403 115 349"/>
+                <path class="path path--flow" d="M83 315 C28 264 31 187 89 149"/>
+                <path class="path path--signal" d="M142 131 C216 169 298 169 374 131"/>
+                <path class="path path--signal" d="M391 165 C342 221 343 264 391 307"/>
+              </svg>
+
+              <div class="loop-node loop-node--goal">
+                <span class="node-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M22 12h-3M12 22v-3M2 12h3"/></svg></span>
+                <small>01</small><strong>Desired state</strong><em>Semantic subgoal</em>
+              </div>
+              <div class="loop-node loop-node--execute">
+                <span class="node-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7z"/></svg></span>
+                <small>02</small><strong>Execute</strong><em>Reason &amp; act</em>
+              </div>
+              <div class="loop-node loop-node--evidence">
+                <span class="node-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9l8-5 8 5v10l-8 3zM4 9l8 5 8-5M12 14v8"/></svg></span>
+                <small>03</small><strong>Evidence</strong><em>Evolving state</em>
+              </div>
+              <div class="loop-node loop-node--monitor">
+                <span class="node-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12s3-6 9-6 9 6 9 6-3 6-9 6-9-6-9-6Z"/><circle cx="12" cy="12" r="2.5"/></svg></span>
+                <small>04</small><strong>Monitor</strong><em>State relations</em>
+              </div>
+
+              <div class="loop-core">
+                <span class="core-ring"></span>
+                <span class="core-ring core-ring--two"></span>
+                <strong>Progress</strong>
+                <small>aware</small>
+              </div>
+            </div>
+
+            <div class="state-row">
+              <span class="state state--ongoing"><i></i> Ongoing</span>
+              <span class="state state--deviated"><i></i> Deviated</span>
+              <span class="state state--completed"><i></i> Completed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-cue" aria-hidden="true"><span></span> Explore the framework</div>
+      </section>
+
+      <section id="abstract" class="section section--light">
+        <div class="shell narrow">
+          <div class="section-heading reveal">
+            <span class="eyebrow">01 / Overview</span>
+            <h2>Abstract</h2>
+          </div>
+          <div class="abstract-card reveal">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <p>ProLoop maintains explicit awareness of long-horizon execution by relating the desired state of an active subgoal to evolving execution evidence. A learned state-relation monitor identifies whether conditions are supported, unresolved, or contradicted, derives progress as ongoing, deviated, or completed, and uses that signal to continue, correct, or transition at the right time.</p>
+            <small class="abstract-note">Project summary based on the current anonymized draft. The final manuscript abstract is in preparation.</small>
+            <div class="abstract-meta">
+              <span>Long-horizon planning</span>
+              <span>Closed-loop reasoning</span>
+              <span>Progress awareness</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="paper" class="section section--dark">
+        <div class="shell split-layout">
+          <div class="section-heading reveal">
+            <span class="eyebrow">02 / Publication</span>
+            <h2>Paper</h2>
+            <p>The anonymized paper PDF will be linked here when the submission version is ready.</p>
+          </div>
+
+          <div class="availability-card reveal">
+            <div class="availability-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6zM14 2v6h6M9 13h8M9 17h5"/></svg>
+            </div>
+            <div>
+              <span class="status-label"><i></i> In preparation</span>
+              <h3>Anonymized manuscript</h3>
+              <p>Paper PDF and supplementary materials will appear here when the submission version is ready.</p>
+            </div>
+            <span class="button button--disabled button--compact" aria-disabled="true">Coming soon</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="method" class="section section--method">
+        <div class="method-glow" aria-hidden="true"></div>
+        <div class="shell">
+          <div class="section-heading section-heading--center reveal">
+            <span class="eyebrow">03 / Framework</span>
+            <h2>Method</h2>
+            <p>ProLoop organizes long-horizon execution as a sequence of semantic subgoals. It compares the desired subgoal state with execution evidence, classifies progress as ongoing, deviated, or completed, and adapts the executor accordingly.</p>
+          </div>
+
+          <div class="method-flow" aria-label="Three stages of the ProLoop method">
+            <article class="method-card reveal">
+              <div class="method-card-head">
+                <span class="method-number">01</span>
+                <span class="method-symbol"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="7" r="3"/><circle cx="17" cy="17" r="3"/><path d="M9.5 8.5 14.5 15.5M17 4v7M4 17h7"/></svg></span>
+              </div>
+              <h3>Structured state construction</h3>
+              <p>Represent desired outcomes and evolving execution evidence in a shared semantic schema.</p>
+              <div class="mini-schema" aria-hidden="true">
+                <span>desired</span><i></i><span>evidence</span>
+              </div>
+            </article>
+
+            <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 48 24"><path d="M2 12h42M36 5l8 7-8 7"/></svg></span>
+
+            <article class="method-card reveal">
+              <div class="method-card-head">
+                <span class="method-number">02</span>
+                <span class="method-symbol"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M4 12h10M4 19h13"/><circle cx="17" cy="12" r="3"/><circle cx="20" cy="19" r="2"/></svg></span>
+              </div>
+              <h3>State-relation monitoring</h3>
+              <p>Identify supported, unresolved, and contradicted conditions for explicit progress awareness.</p>
+              <div class="relation-meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+            </article>
+
+            <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 48 24"><path d="M2 12h42M36 5l8 7-8 7"/></svg></span>
+
+            <article class="method-card reveal">
+              <div class="method-card-head">
+                <span class="method-number">03</span>
+                <span class="method-symbol"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11M5 8v11h11"/></svg></span>
+              </div>
+              <h3>Progress-guided adaptation</h3>
+              <p>Continue normal reasoning, trigger targeted correction, or transition between subgoals at the right time.</p>
+              <div class="adaptation-options" aria-hidden="true"><span>continue</span><span>correct</span><span>transition</span></div>
+            </article>
+          </div>
+
+          <div class="progress-panel reveal">
+            <div class="progress-panel-copy">
+              <span class="eyebrow">Closed-loop control</span>
+              <h3>Respond to progress, then consolidate confirmed memory.</h3>
+            </div>
+            <div class="progress-states">
+              <div><span class="state-dot state-dot--blue"></span><strong>Ongoing</strong><small>Continue normal reasoning</small></div>
+              <div><span class="state-dot state-dot--amber"></span><strong>Deviated</strong><small>Trigger targeted correction</small></div>
+              <div><span class="state-dot state-dot--green"></span><strong>Completed</strong><small>Transition between subgoals</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="results" class="section section--light results-section">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <span class="eyebrow">04 / Evaluation</span>
+            <h2>Results</h2>
+            <p>Preliminary results from the current anonymous draft on AgentBoard ALFWorld OOD. Figures, videos, and finalized results will be added with the submission materials.</p>
+          </div>
+
+          <div class="result-grid">
+            <article class="result-card reveal">
+              <span class="result-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v18M5 17l5-5 4 3 5-8"/></svg></span>
+              <span class="result-label">Benchmark</span>
+              <strong>AgentBoard · ALFWorld</strong>
+            </article>
+            <article class="result-card reveal">
+              <span class="result-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5zM3 12l9 5 9-5M3 16l9 5 9-5"/></svg></span>
+              <span class="result-label">Setting</span>
+              <strong>Simulation + real robot</strong>
+            </article>
+            <article class="result-card reveal">
+              <span class="result-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+              <span class="result-label">Status</span>
+              <strong>Preliminary draft results</strong>
+            </article>
+          </div>
+
+          <div class="draft-results reveal">
+            <div class="score-panel">
+              <div class="score-panel-head">
+                <div>
+                  <span class="status-label"><i></i> Draft table I–III</span>
+                  <h3>Progress-aware planning at a glance</h3>
+                </div>
+                <span class="draft-chip">Not final</span>
+              </div>
+              <div class="score-grid">
+                <div class="score"><strong>96.52<small>%</small></strong><span>Overall SR</span><em>Qwen3-14B-AWQ</em></div>
+                <div class="score"><strong>96.36<small>%</small></strong><span>Hard SR</span><em>Qwen3-14B-AWQ</em></div>
+                <div class="score"><strong>10.14</strong><span>Environment steps</span><em>lower is better</em></div>
+                <div class="score"><strong>100<small>%</small></strong><span>On-time transition</span><em>explicit assessment</em></div>
+              </div>
+            </div>
+
+            <div class="transition-panel">
+              <span class="result-label">Subgoal transition reliability</span>
+              <h3>Explicit progress assessment</h3>
+              <div class="bar-comparison">
+                <div>
+                  <span><b>Implicit LLM</b><em>68.70% on-time</em></span>
+                  <i><u style="--value:68.7%"></u></i>
+                </div>
+                <div>
+                  <span><b>ProLoop</b><em>100.00% on-time</em></span>
+                  <i><u style="--value:100%"></u></i>
+                </div>
+              </div>
+              <p>In the draft evaluation, ProLoop records 0% delayed, premature, and missed transitions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="repository" class="section repository-section">
+        <div class="repository-glow" aria-hidden="true"></div>
+        <div class="shell repository-card reveal">
+          <span class="eyebrow">05 / Resources</span>
+          <h2>Follow the project.</h2>
+          <p>The anonymous project repository is available on GitHub. Source code and supplementary materials will be released upon acceptance.</p>
+          <a class="button button--primary" href="https://github.com/proloopplanning/proloopplanning.github.io" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.46-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.55 9.55 0 0 1 12 6.84a9.5 9.5 0 0 1 2.5.34c1.9-1.29 2.74-1.02 2.74-1.02.56 1.37.21 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+            View repository
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-layout">
+        <a class="brand brand--footer" href="#top" aria-label="ProLoop home">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>Pro<span>Loop</span></span>
+        </a>
+        <p>This page is intentionally anonymous for double-blind review.</p>
+        <span>ICRA 2027</span>
+      </div>
+    </footer>
+
+    <script>
+      (() => {
+        const header = document.querySelector('[data-header]');
+        const nav = document.querySelector('[data-nav]');
+        const toggle = document.querySelector('[data-menu-toggle]');
+        const navLinks = [...nav.querySelectorAll('a')];
+        const sections = navLinks.map((link) => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+
+        const syncHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 24);
+        syncHeader();
+        window.addEventListener('scroll', syncHeader, { passive: true });
+
+        toggle.addEventListener('click', () => {
+          const open = !nav.classList.contains('is-open');
+          nav.classList.toggle('is-open', open);
+          toggle.classList.toggle('is-open', open);
+          toggle.setAttribute('aria-expanded', String(open));
+        });
+
+        navLinks.forEach((link) => link.addEventListener('click', () => {
+          nav.classList.remove('is-open');
+          toggle.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }));
+
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            navLinks.forEach((link) => link.classList.toggle('is-active', link.getAttribute('href') === `#${entry.target.id}`));
+          });
+        }, { rootMargin: '-35% 0px -55%', threshold: 0 });
+        sections.forEach((section) => sectionObserver.observe(section));
+      })();
+    </script>
+  </body>
+</html>

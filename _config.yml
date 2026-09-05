@@ -1,6 +1,2 @@
 title: 'ProLoop: Progress-Aware Closed-Loop Framework via Structured State Relations for Long-Horizon Robotic Task Planning'
-remote_theme: pages-themes/cayman@v0.2.0
-plugins:
-  - jekyll-remote-theme
-description: ICRA 2027<br/>Anonymous Author(s)
-show_downloads: false
+description: 'A progress-aware closed-loop framework for long-horizon robotic task planning.'
