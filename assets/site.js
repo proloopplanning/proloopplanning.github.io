@@ -18,7 +18,3 @@ document.querySelectorAll('[data-model]').forEach(b=>b.addEventListener('click',
 const menu=document.querySelector('.menu'),links=document.querySelector('#nav-links');
 menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
 links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');}));
-const dialog=document.querySelector('#image-dialog');
-document.querySelectorAll('.zoom').forEach(b=>b.addEventListener('click',()=>{const source=b.querySelector('img'),target=dialog.querySelector('img');target.src=source.src;target.alt=source.alt;dialog.showModal();}));
-dialog.querySelector('.close').addEventListener('click',()=>dialog.close());
-dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
