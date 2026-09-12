@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#f7f8fa">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css"><script src="assets/site.js" defer></script>
+  <link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/viewer.css"><script src="assets/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#abstract">Skip to content</a>
@@ -38,4 +38,8 @@
 <section id="paper"><div class="container narrow"><h2>Paper</h2><div class="resource-card"><h3>ProLoop: Progress-Aware Closed-Loop Framework via Structured State Relations for Long-Horizon Robotic Task Planning</h3><p>Anonymous Author(s)</p><a class="button primary" href="assets/ProLoop.pdf" target="_blank" rel="noopener">Paper ↗</a></div></div></section>
 </main>
 <footer><div class="container"><a class="logo" href="#">ProLoop</a><p>Anonymous Author(s)</p></div></footer>
+<dialog id="figure-viewer" aria-label="Figure viewer">
+  <div class="viewer-toolbar"><button type="button" data-zoom="out" aria-label="Zoom out">−</button><output id="zoom-level" aria-label="Zoom level">100%</output><button type="button" data-zoom="in" aria-label="Zoom in">+</button><button type="button" id="zoom-reset">Reset</button><a id="figure-pdf" target="_blank" rel="noopener">PDF ↗</a><button type="button" id="viewer-close" aria-label="Close figure viewer">×</button></div>
+  <div id="figure-stage" tabindex="0" aria-label="Scroll to zoom, drag to pan. Use plus, minus, zero and arrow keys."><img id="viewer-image" alt="" draggable="false"></div>
+</dialog>
 </body></html>
